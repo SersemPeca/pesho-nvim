@@ -21,7 +21,18 @@
    {:dir "~/Projects/FMI/Vim/docker-decompose-nvim"
     :dependencies ["akinsho/toggleterm.nvim" "nvim-telescope/telescope.nvim"]}
 
+   {1 :mfussenegger/nvim-jdtls
+    :config (. (require :pesho.config.jdtls) :config)} 
    {1 :nanotee/luv-vimdocs}
+
+   {1 :kawre/leetcode.nvim
+    :build ":TSUpdate html"
+    :dependencies ["nvim-treesitter/nvim-treesitter"
+                   "nvim-telescope/telescope.nvim"
+                   "nvim-lua/plenary.nvim"
+                   "MunifTanjim/nui.nvim"
+                   "nvim-tree/nvim-web-devicons"]
+    :opts {:console {:open_on_runcode true}}}
 
    {1 :milisims/nvim-luaref}
     
@@ -37,7 +48,7 @@
    {1 :nvim-telescope/telescope.nvim
     :config (. (require :pesho.config.telescope) :config)
     :dependencies ["nvim-lua/plenary.nvim"]
-    :tag "0.1.1"}
+    :tag "0.1.4"}
    ;; Telescope-ui-select
    {1 :nvim-telescope/telescope-ui-select.nvim}
 
