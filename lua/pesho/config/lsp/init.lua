@@ -12,6 +12,8 @@ M.config = function()
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
   vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to Reference" })
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover" })
+  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next Diagnostic" })
+  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev Diagnostic" })
 
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
       underline = true,
