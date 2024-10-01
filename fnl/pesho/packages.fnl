@@ -9,7 +9,8 @@
     :config (. (require :pesho.config.hotpot) :config)}
 
    {1 "akinsho/toggleterm.nvim"
-    :config (fn [] ((. (require "toggleterm") :setup) {}))}
+    :config (fn []
+              ((. (require "toggleterm") :setup) {}))}
 
    {:dir "~/Projects/FMI/Vim/nix-update.nvim"
     :config (fn []
@@ -24,6 +25,13 @@
    {1 :mfussenegger/nvim-jdtls
     :config (. (require :pesho.config.jdtls) :config)} 
    {1 :nanotee/luv-vimdocs}
+
+   {1 :isovector/cornelis
+    :dependencies [:neovimhaskell/nvim-hs.vim
+                   :kana/vim-textobj-user
+                   :junegunn/vim-easy-align]
+    :config (. (require :pesho.config.cornelis) :config)}
+
 
    {1 :kawre/leetcode.nvim
     :build ":TSUpdate html"
@@ -43,6 +51,14 @@
 
    {1 :nvim-treesitter/playground
     :dependencies :nvim-treesitter/nvim-treesitter}
+
+   ;; Neogit
+   {1 :NeogitOrg/neogit
+    :dependencies ["nvim-lua/plenary.nvim"
+                   "sindrets/diffview.nvim"
+                   "nvim-telescope/telescope.nvim"]}
+    
+    
 
    ;; Telescope  
    {1 :nvim-telescope/telescope.nvim

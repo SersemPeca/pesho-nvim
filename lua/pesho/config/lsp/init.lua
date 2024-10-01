@@ -25,6 +25,7 @@ M.config = function()
 	require("lspconfig").rust_analyzer.setup({single_file_support = true,})
 	require("lspconfig").clangd.setup({})
 	require("lspconfig").tsserver.setup({})
+    require("lspconfig").pyright.setup({})
 	require("lspconfig").intelephense.setup({})
 	require("lspconfig").hls.setup({
         settings = {
