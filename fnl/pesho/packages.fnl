@@ -12,15 +12,15 @@
     :config (fn []
               ((. (require "toggleterm") :setup) {}))}
 
-   {:dir "~/Projects/FMI/Vim/nix-update.nvim"
+   {1 :reo101/nix-update.nvim
     :config (fn []
               (let [nix-update (require "nix-update")
                     nix-update-fetches (require "nix-update.fetches")]
                 (nix-update.setup)
                 (vim.keymap.set :n :<leader>nc nix-update-fetches.prefetch-fetch)))}
 
-   {:dir "~/Projects/FMI/Vim/docker-decompose-nvim"
-    :dependencies ["akinsho/toggleterm.nvim" "nvim-telescope/telescope.nvim"]}
+   ; {:dir "~/Projects/FMI/Vim/docker-decompose-nvim"
+   ;  :dependencies ["akinsho/toggleterm.nvim" "nvim-telescope/telescope.nvim"]}
 
    {1 :mfussenegger/nvim-jdtls
     :config (. (require :pesho.config.jdtls) :config)} 
